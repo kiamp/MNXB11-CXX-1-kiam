@@ -3,23 +3,30 @@
  *  Don't forget to add includes properly.
  * */
 
-#include "as1.hpp"
-#include <iostream>
+#include "as2.hpp"
 
 int main() { 
-  // Example for as1.0
-  homework::printHello();
-int x = 3;
-std::cout << x << std::endl; 
-homework::AddOneRef(x);
-std::cout << x << std::endl;
 
-  homework::isOdd(23);
+std::cout << "Assignment 2" << std::endl;
 
-  homework::floatToInt(25.7);
-int n=4;
-  homework::factorial(n);
-  std::cout << "The factorial of " << n << " is " << homework::factorial(n) << std::endl;
+//homework::Foo::quux();
+//homework::Foo fooobject;
+std::cout << homework::Foo().bar() << std::endl;
+std::cout << homework::Foo().baz() << std::endl;
+std::vector<double> numbers = homework::Foo().quux();
+
+for (double num : numbers) {
+ std::cout << num << std::endl; //chatgpt helped with how to print
+}
+
+
+homework::fVector2D vector1(9.4, 4.3);
+
+homework::fVector2D vector2(4.5, 6.7);
+
+std::cout << vector1 + vector2 << std::endl;
+
+homework::isVectorEqual(vector1, vector2);
 
 return 0;}
-
+//namespace homework

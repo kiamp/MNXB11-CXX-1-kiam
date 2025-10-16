@@ -1,5 +1,6 @@
 #pragma once
 #include <vector>
+#include <iostream>
 
 namespace homework {
 // Hint: Lecture 5 slides
@@ -27,9 +28,29 @@ public:
   fVector2D() = default;
   fVector2D(float x, float y) : x_(x), y_(y) {}
 
+  bool operator==(const fVector2D& other) const {
+    return (x_==other.x_) && (y_== other.y_); //copied form chatgpt
+  }
+
+ friend fVector2D operator+(const fVector2D& leftSide, const fVector2D& rightSide) {
+  return fVector2D (leftSide.x_ + rightSide.x_, leftSide.y_ + rightSide.y_);
+ }
+
+friend std::ostream& operator<<(std::ostream& os, const fVector2D& vec) {
+  os << "(" << vec.x_ << ", " <<vec.y_ << ")";
+  return os; //from chatpgpt
+}
+
 private:
+
   float x_;
   float y_;
 };
+
+bool isVectorEqual(fVector2D vectorOne, fVector2D vectorTwo);
+
+
+
+
 
 } // namespace homework
