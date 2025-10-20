@@ -3,19 +3,23 @@
  *  Don't forget to add includes properly.
  * */
 
-#include "as3.hpp"
+#include "as1.hpp"
+#include <iostream>
 
 int main() { 
+  // Example for as1.0
+  homework::printHello();
 
-std::cout << "Assignment 3" << std::endl;
+int x = 3;
+std::cout << x << std::endl; 
+homework::AddOneRef(x);
+std::cout << x << std::endl;
 
-homework::Apple apple1(homework::Color::green);
+  homework::isOdd(23);
 
-std::cout << apple1.getName() << std::endl;
+  homework::floatToInt(25.7);
+int n=0;
+  homework::factorial(n);
+  std::cout << "The factorial of " << n << " is " << homework::factorial(n) << std::endl;
 
-std::cout << apple1.getColor() << std::endl;
-
-std::cout << apple1.getTaste() << std::endl;
-
-return 0;
-}
+return 0;}

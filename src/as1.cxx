@@ -24,7 +24,7 @@ int floatToInt(float x) {
 }
 
 int factorial(int n){
-    if (n < 1) {
+    if (n < 0) {
         std::cout << "Please input a positive number" << std::endl;
         return -1;
     } 
