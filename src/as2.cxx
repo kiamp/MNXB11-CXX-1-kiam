@@ -4,8 +4,9 @@ namespace homework {
 
 // implement Foo methods here
 int Foo::bar() { return 42; }
+
 float Foo::baz() {
-  float x = 2.71;
+  x = 2.71;
   return 3.14;
 }
 

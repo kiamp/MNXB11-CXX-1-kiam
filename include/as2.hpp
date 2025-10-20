@@ -10,8 +10,11 @@ namespace homework {
 // TO DO: in src/as1.cxx, implement the method baz() of the struct Foo to return 3.14 and set the member variable x to 2.71
 // TO DO: in src/as1.cxx, implement the method quux() of the struct Foo to return a vector of doubles {1.0, 2.0, 3.0}
 struct Foo {
+
   int bar();
+
   float baz();
+  
   std::vector<double> quux();
 
   float x;
